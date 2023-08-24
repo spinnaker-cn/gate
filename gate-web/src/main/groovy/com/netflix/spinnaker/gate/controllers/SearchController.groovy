@@ -39,7 +39,7 @@ class SearchController {
                    @RequestParam(value = "allowShortQuery", defaultValue = "false", required = false) boolean allowShortQuery,
                    @RequestHeader(value = "X-RateLimit-App", required = false) String sourceApp,
                    HttpServletRequest httpServletRequest) {
-    if (!allowShortQuery && query?.size() < 3) {
+    if (!allowShortQuery && query?.size() < 1) {
       // keyword searches must have a minimum of 3 characters
       return []
     }
