@@ -3,18 +3,18 @@ server:
 
 services:
   deck:
-    baseUrl: http://localhost:9000
+    baseUrl: http://10.200.130.41:9000
   orca:
-    baseUrl: http://localhost:8083
+    baseUrl: http://10.200.130.41:8083
   front50:
     canaryConfigStore: false
-    baseUrl: http://localhost:8080
+    baseUrl: http://10.200.130.4:8080
   clouddriver:
     baseUrl: http://localhost:7002
 # semi-optional services (Everybody except Netflix needs these):
   rosco:
     enabled: true
-    baseUrl: http://localhost:8087
+    baseUrl: http://10.200.130.41:8087
     # These are here only for Netflix, whose bakery does not support dynamically fetching these properties.
     # Modifying the details below when rosco.enabled is true will have no effect (do it in the Rosco config).
     defaults:
@@ -47,7 +47,7 @@ services:
   kayenta:
     enabled: false
     canaryConfigStore: true
-    baseUrl: http://localhost:8090
+    baseUrl: http://10.200.130.4:8090
 
 redis:
   connection: redis://localhost:6379
